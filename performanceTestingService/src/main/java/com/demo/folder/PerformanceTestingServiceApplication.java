@@ -1,12 +1,14 @@
 package com.demo.folder;
 
+import com.demo.folder.service.TestTypeService;
 import com.demo.folder.test_service.K6Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 public class PerformanceTestingServiceApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
