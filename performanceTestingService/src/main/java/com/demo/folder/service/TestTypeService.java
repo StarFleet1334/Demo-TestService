@@ -20,4 +20,8 @@ public class TestTypeService {
         testTypeMessage.setTestTime(LocalDateTime.now());
         testTypeAction.publishToTopic(testTypeMessage);
     }
+
+    public void publishLog(String summary) {
+        testTypeAction.publishToLogTopic(summary);
+    }
 }

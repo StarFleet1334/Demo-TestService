@@ -2,6 +2,7 @@ package com.demo.folder.action;
 
 
 import com.demo.folder.broker.message.TestTypeMessage;
+import com.demo.folder.broker.producer.LogMessageProducer;
 import com.demo.folder.broker.producer.TestTypeMessageProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +16,14 @@ public class TestTypeAction {
     @Autowired
     private TestTypeMessageProducer testTypeMessageProducer;
 
+    @Autowired
+    private LogMessageProducer logMessageProducer;
+
     public void publishToTopic(TestTypeMessage testTypeMessage) {
         testTypeMessageProducer.publish(testTypeMessage);
+    }
+
+    public void publishToLogTopic(String summary) {
+        logMessageProducer.publish(summary);
     }
 }
