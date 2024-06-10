@@ -11,7 +11,7 @@ public class K6Service {
     public void runK6Test() {
         try {
             // Path to your K6 script
-            String k6ScriptPath = "/Users/ilialataria/Desktop/demo-finale/performanceTestingService/src/main/java/com/demo/folder/kSixth/test-script.js";
+            String k6ScriptPath = "/Users/ilialataria/Desktop/demo-finale/performanceTestingService/src/main/java/com/demo/folder/kSixth/mainTest.js";
             ProcessBuilder processBuilder = new ProcessBuilder("k6", "run", k6ScriptPath);
             processBuilder.redirectErrorStream(true);
             Process process = processBuilder.start();
