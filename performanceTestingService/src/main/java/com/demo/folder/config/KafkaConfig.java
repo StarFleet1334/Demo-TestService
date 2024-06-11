@@ -39,6 +39,10 @@ public class KafkaConfig {
         return TopicBuilder.name("t-test-problem").partitions(1).replicas(1).build();
     }
 
+    @Bean
+    public NewTopic failureTopic() { return TopicBuilder.name("t-global-failure").partitions(1).replicas(1).build(); }
+
+
     @Bean(name = "globalLogContainerFactory")
     public ConcurrentKafkaListenerContainerFactory<Object, Object> globalLogContainerFactory(
             ConcurrentKafkaListenerContainerFactoryConfigurer configurer,

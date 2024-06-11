@@ -24,4 +24,8 @@ public class TestTypeService {
     public void publishLog(String summary) {
         testTypeAction.publishToLogTopic(summary);
     }
+
+    public void publishError(String summary) {
+        testTypeAction.publishToErrorTopic(summary);
+    }
 }

@@ -2,6 +2,7 @@ package com.demo.folder.action;
 
 
 import com.demo.folder.broker.message.TestTypeMessage;
+import com.demo.folder.broker.producer.FailureMessageProducer;
 import com.demo.folder.broker.producer.LogMessageProducer;
 import com.demo.folder.broker.producer.TestTypeMessageProducer;
 import org.slf4j.Logger;
@@ -19,11 +20,19 @@ public class TestTypeAction {
     @Autowired
     private LogMessageProducer logMessageProducer;
 
+
+    @Autowired
+    private FailureMessageProducer failureMessageProducer;
+
     public void publishToTopic(TestTypeMessage testTypeMessage) {
         testTypeMessageProducer.publish(testTypeMessage);
     }
 
     public void publishToLogTopic(String summary) {
         logMessageProducer.publish(summary);
+    }
+
+    public void publishToErrorTopic(String summary) {
+        failureMessageProducer.publish(summary);
     }
 }

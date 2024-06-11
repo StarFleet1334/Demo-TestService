@@ -1,6 +1,7 @@
 package com.demo.folder.api;
 
 
+import com.demo.folder.broker.message.FailureLogPayLoad;
 import com.demo.folder.service.TestTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,11 @@ public class TestTypeController {
     @PostMapping("/log-summary")
     public void logSummary(@RequestBody String summary) {
         testTypeService.publishLog(summary);
+    }
+
+    @PostMapping("/test_failure")
+    public void failureLog(@RequestBody FailureLogPayLoad payLoad) {
+        testTypeService.publishError(payLoad.toString());
     }
 
 }

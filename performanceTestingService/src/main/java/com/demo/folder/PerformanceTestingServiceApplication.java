@@ -20,6 +20,7 @@ public class PerformanceTestingServiceApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		k6Service.runK6Test();
+//		k6Service.runK6Test();
+		k6Service.runK6FailureTest();
 	}
 }
