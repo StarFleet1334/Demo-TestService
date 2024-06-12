@@ -1,0 +1,3 @@
+[submodule "gatling-maven-plugin-demo-scala"]
+	path = gatling-maven-plugin-demo-scala
+	url = https://github.com/gatling/gatling-maven-plugin-demo-scala
