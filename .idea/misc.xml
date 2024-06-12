@@ -6,7 +6,20 @@
     <file type="web" url="file://$PROJECT_DIR$/performanceTestingService" />
     <file type="web" url="file://$USER_HOME$/Downloads/notification-alertService" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../gatling-maven-plugin-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../gatling-maven-plugin-demo-scala/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../gatling-maven-plugin-demo/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
