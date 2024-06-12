@@ -1,4 +1,4 @@
-package com.demo.folder.broker.message;
+package com.demo.folder.notalertservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;

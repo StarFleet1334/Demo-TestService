@@ -1,6 +1,7 @@
 package com.demo.folder.action;
 
 
+import com.demo.folder.broker.message.FailureLogPayLoad;
 import com.demo.folder.broker.message.TestTypeMessage;
 import com.demo.folder.broker.producer.FailureMessageProducer;
 import com.demo.folder.broker.producer.LogMessageProducer;
@@ -32,7 +33,7 @@ public class TestTypeAction {
         logMessageProducer.publish(summary);
     }
 
-    public void publishToErrorTopic(String summary) {
-        failureMessageProducer.publish(summary);
+    public void publishToErrorTopic(FailureLogPayLoad payload) {
+        failureMessageProducer.publish(payload);
     }
 }

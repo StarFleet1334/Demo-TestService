@@ -1,6 +1,7 @@
 package com.demo.folder.service;
 
 import com.demo.folder.action.TestTypeAction;
+import com.demo.folder.broker.message.FailureLogPayLoad;
 import com.demo.folder.broker.message.TestTypeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class TestTypeService {
         testTypeAction.publishToLogTopic(summary);
     }
 
-    public void publishError(String summary) {
-        testTypeAction.publishToErrorTopic(summary);
+    public void publishError(FailureLogPayLoad payLoad) {
+        testTypeAction.publishToErrorTopic(payLoad);
     }
 }
